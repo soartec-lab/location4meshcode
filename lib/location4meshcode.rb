@@ -1,5 +1,5 @@
 require "location4meshcode/version"
 
 module Location4meshcode
-  # Your code goes here...
+  require 'location4meshcode/point'
 end
