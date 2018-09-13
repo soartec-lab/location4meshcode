@@ -6,12 +6,12 @@ require "location4meshcode/version"
 Gem::Specification.new do |spec|
   spec.name          = "location4meshcode"
   spec.version       = Location4meshcode::VERSION
-  spec.authors       = ["Shodai Suzuki"]
-  spec.email         = ["shodai.suzuki@unisys.co.jp"]
+  spec.authors       = ["soartec-lab"]
+  spec.email         = ["info@soartec-lab.work"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Convert latitude and longitude to mesh map code}
+  spec.description   = %q{I will write this section when I finish creating this gem}
+  spec.homepage      = "https://github.com/soartec-lab/location4meshcode"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
