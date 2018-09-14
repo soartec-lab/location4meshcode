@@ -26,5 +26,16 @@ module Location4meshcode
       # 1次メッシュの結果と結合
       meshcode_level1 + "#{lat}#{lon}"
     end
+
+    def meshcode_level3
+      # 2次メッシュ区画を10等分
+      lat_remainder = (((@latitude * 60) % 40) % 5)
+      lat = ((lat_remainder * 1) / 0.5).to_i
+
+      lon_remainder = (((@longitude - @longitude.to_i) * 60) % 7.5)
+      lon = ((lon_remainder * 1) / 0.75).to_i
+
+      meshcode_level2 + "#{lat}#{lon}"
+    end
   end
 end
