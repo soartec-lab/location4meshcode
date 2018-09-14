@@ -8,6 +8,13 @@ module Location4meshcode
       @longitude = longitude.to_f
     end
 
+    def meshcode(level:)
+      call_method = "meshcode_level#{level}"
+      send(call_method.to_sym)
+    end
+
+    private
+
     def meshcode_level1
       # 上2桁
       # 赤道から上方向に40分ごとに振っている通し番号。
@@ -34,8 +41,6 @@ module Location4meshcode
 
       meshcode_level2 + "#{lat}#{lon}"
     end
-
-    private
 
     def level1_lat_remainder
       @latitude % 40
