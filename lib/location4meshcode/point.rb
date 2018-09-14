@@ -2,7 +2,7 @@ module Location4meshcode
   class Point
     attr_reader :latitude, :longitude
 
-    def initialize(latitude, longitude)
+    def initialize(latitude:, longitude:)
       # 1度 = 60分なので緯度はここで単位を分に変換しておく
       @latitude = (latitude.to_f) * 60
       @longitude = longitude.to_f
