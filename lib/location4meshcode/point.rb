@@ -10,7 +10,7 @@ module Location4meshcode
 
     def meshcode(level:)
       call_method = "meshcode_level#{level}"
-      send(call_method.to_sym)
+      send(call_method)   
     end
 
     private
