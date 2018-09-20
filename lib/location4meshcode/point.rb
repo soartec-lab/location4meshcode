@@ -9,8 +9,13 @@ module Location4meshcode
     end
 
     def meshcode(level:)
+      valid_params = [*1..3]
+      raise ArgumentError unless valid_params.include?(level)
+
       call_method = "meshcode_level#{level}"
-      send(call_method)   
+      send(call_method)
+    rescue ArgumentError
+      "Please enter a valid value #{valid_params}"
     end
 
     private
